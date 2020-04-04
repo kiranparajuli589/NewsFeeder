@@ -11,7 +11,7 @@ type newsFeedPostRequest struct {
 	Post string `json:"post"`
 }
 
-func NewsFeedPost(feed *newsfeed.ItemList) gin.HandlerFunc {
+func NewsFeedPost(feed newsfeed.Adder) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		requestBody := newsFeedPostRequest{}
 
